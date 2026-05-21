@@ -11,7 +11,7 @@ darkbutton.addEventListener("click", function(){
 })
 
 //Accordion setup (from W3 Schools)
-var acc = document.getElementsByClassName("accordion");
+var acc = document.getElementsByClassName("section-header");
 var i;
 for (i = 0; i < acc.length; i++) {
   acc[i].addEventListener("click", function() {

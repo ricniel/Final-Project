@@ -4,13 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Study Abroad Dublin</title>
-    <link rel = "stylesheet" href="new.css">
+    <link rel = "stylesheet" href="css/new.css">
 </head>
 <body>
     <a class ="skip-link" href = "#main">Skip to Main Content</a>
     <div class ="container">
       <header class="header">
-      <p class="section-header">UMSI Study Abroad 2026</p>
+      <p class="header-eyebrow">UMSI Study Abroad 2026</p>
       <h1>Study Abroad Dublin</h1>
       <p class="header-sub">Tap a dot on any map to explore ↓</p>
     </header>
@@ -22,33 +22,38 @@
         <div class="filter-controls" role="toolbar" aria-label="Filter places by category">
           <button class="filter-btn active" data-filter="all">All</button>
           <button class="filter-btn" data-filter=".class-trips">🎓 Class Trips</button>
-          <button class="filter-btn" data-filter=".pubs-food">🍺 Pubs</button>
-          <button class="filter-btn" data-filter=".weekend-trips">🚌 Galway</button>
-          <button class="filter-btn" data-filter=".highlights">⛳ Golf</button>
-          <button class="filter-btn" data-filter=".misc">🍔 Food</button>
-          <button class="filter-btn" data-filter=".misc">🌳 Nature</button>
+          <button class="filter-btn" data-filter=".pubs">🍺 Pubs</button>
+          <button class="filter-btn" data-filter=".galway">🚌 Galway</button>
+          <button class="filter-btn" data-filter=".golf">⛳ Golf</button>
+          <button class="filter-btn" data-filter=".food">🍔 Food</button>
+          <button class="filter-btn" data-filter=".nature">🌳 Nature</button>
         </div>
         
       </section>
 
-  <div id ="mixitupContainer">
-    <!--Class Trips-->
-    <section class = "location mix class-trips" id = "class-trips">
+  <div id ="mixContainer">
+ <!--Class Trips-->
+    <section class="location mix class-trips" id="class-trips">
       <button class="section-header" aria-expanded="false">🎓 Class Trips</button>
       <div class="panel">
-      <img class = "map" src = "" alt = "">
-      <div class = "place">
-        <img src = "" alt = "">
-        <p class ="caption"><strong>Place Name</strong>Description</p>
+      <div class="map-wrap">
+        <img class="map" src="https://raw.githubusercontent.com/ricniel/Final-Project/main/Final%20Project/class-trips-map.png" alt="Map of Dublin showing class trip locations">
+        <button class="map-btn pos-ct-1" data-scroll="place-ct-1" aria-label="1 — Place Name">1</button>
+        <button class="map-btn pos-ct-2" data-scroll="place-ct-2" aria-label="2 — Place Name">2</button>
+        <button class="map-btn pos-ct-3" data-scroll="place-ct-3" aria-label="3 — Place Name">3</button>
       </div>
-      <div class = "place">
-        <img src = "" alt = "">
-        <p class ="caption"><strong>Place Name</strong>Description</p>
+      <div class="place" id="place-ct-1">
+        <img src="" alt="">
+        <p class="caption"><strong>1. Place Name</strong> — Description</p>
       </div>
-      <div class = "place">
-        <img src = "" alt = "">
-        <p class ="caption"><strong>Place Name</strong>Description</p>
-      </div>    
+      <div class="place" id="place-ct-2">
+        <img src="" alt="">
+        <p class="caption"><strong>2. Place Name</strong> — Description</p>
+      </div>
+      <div class="place" id="place-ct-3">
+        <img src="" alt="">
+        <p class="caption"><strong>3. Place Name</strong> — Description</p>
+      </div>
       </div>
     </section>
 
@@ -56,98 +61,123 @@
     <section class = "location mix pubs" id = "pubs">
       <button class="section-header" aria-expanded="false">🍺 Pubs</button>
       <div class="panel">
-      <img class = "map" src = "" alt = "">
-      <div class = "place">
-        <img src = "" alt = "">
-        <p class ="caption"><strong>Place Name</strong>Description</p>
+      <div class="map-wrap">
+        <img class="map" src="https://raw.githubusercontent.com/ricniel/Final-Project/main/Final%20Project/pubs-map.png" alt="Map of Dublin showing pub locations">
+        <button class="map-btn pos-pubs-1" data-scroll="place-pubs-1" aria-label="1 — Brazen Head">1</button>
+        <button class="map-btn pos-pubs-2" data-scroll="place-pubs-2" aria-label="2 — Temple Bar">2</button>
+        <button class="map-btn pos-pubs-3" data-scroll="place-pubs-3" aria-label="3 — Dudley's">3</button>
       </div>
-      <div class = "place">
-        <img src = "" alt = "">
-        <p class ="caption"><strong>Place Name</strong>Description</p>
+      <div class = "place" id = "place-pubs-1">
+        <img src = "" alt = "Outside of the Temple Bar">
+        <p class ="caption"><strong>The Temple Bar</strong>Description</p>
       </div>
-      <div class = "place">
-        <img src = "" alt = "">
-        <p class ="caption"><strong>Place Name</strong>Description</p>
+      <div class = "place" id = "place-pubs-2">
+        <img src = "" alt = "A pint of guinness in Grogan's">
+        <p class ="caption"><strong>Grogan's Pub</strong>Description</p>
+      </div>
+      <div class = "place" id = "place-pubs-3">
+        <img src = "" alt = "A Pint of Guinness in Dudley's">
+        <p class ="caption"><strong>Dudley's Pub</strong>Description</p>
       </div>    
       </div>
     </section>
 
-  <!--Galway-->
+ <!--Galway-->
   <section class="location mix galway" id="galway">
       <button class="section-header" aria-expanded="false">🚌 Galway</button>
       <div class="panel">
-      <img class = "map" src = "" alt = "">
-      <div class = "place">
-        <img src = "" alt = "">
-        <p class ="caption"><strong>Place Name</strong>Description</p>
+      <div class="map-wrap">
+        <img class="map" src="https://raw.githubusercontent.com/ricniel/Final-Project/main/Final%20Project/Galway-map.png" alt="Map of Galway showing trip locations">
+        <button class="map-btn pos-gal-1" data-scroll="place-gal-1" aria-label="1 — Place Name">1</button>
+        <button class="map-btn pos-gal-2" data-scroll="place-gal-2" aria-label="2 — Place Name">2</button>
+        <button class="map-btn pos-gal-3" data-scroll="place-gal-3" aria-label="3 — Place Name">3</button>
       </div>
-      <div class = "place">
-        <img src = "" alt = "">
-        <p class ="caption"><strong>Place Name</strong>Description</p>
+      <div class="place" id="place-gal-1">
+        <img src="" alt="">
+        <p class="caption"><strong>1. Place Name</strong> — Description</p>
       </div>
-      <div class = "place">
-        <img src = "" alt = "">
-        <p class ="caption"><strong>Place Name</strong>Description</p>
+      <div class="place" id="place-gal-2">
+        <img src="" alt="">
+        <p class="caption"><strong>2. Place Name</strong> — Description</p>
+      </div>
+      <div class="place" id="place-gal-3">
+        <img src="" alt="">
+        <p class="caption"><strong>3. Place Name</strong> — Description</p>
       </div>   
       </div> 
     </section>
 
     <!--Golf-->
-      <section class = "location mix golf" id = "golf">
+      <section class="location mix golf" id="golf">
       <button class="section-header" aria-expanded="false">⛳ Golf</button>
       <div class="panel">
-      <img class = "map" src = "" alt = "">
-      <div class = "place">
-        <img src = "" alt = "">
-        <p class ="caption"><strong>Place Name</strong>Description</p>
+      <div class="map-wrap">
+        <img class="map" src="https://raw.githubusercontent.com/ricniel/Final-Project/main/Final%20Project/Golf-map.png" alt="Map of Ireland showing golf course locations">
+        <button class="map-btn pos-golf-1" data-scroll="place-golf-1" aria-label="1 — Place Name">1</button>
+        <button class="map-btn pos-golf-2" data-scroll="place-golf-2" aria-label="2 — Place Name">2</button>
+        <button class="map-btn pos-golf-3" data-scroll="place-golf-3" aria-label="3 — Place Name">3</button>
       </div>
-      <div class = "place">
-        <img src = "" alt = "">
-        <p class ="caption"><strong>Place Name</strong>Description</p>
+      <div class="place" id="place-golf-1">
+        <img src="" alt="">
+        <p class="caption"><strong>1. Place Name</strong> — Description</p>
       </div>
-      <div class = "place">
-        <img src = "" alt = "">
-        <p class ="caption"><strong>Place Name</strong>Description</p>
+      <div class="place" id="place-golf-2">
+        <img src="" alt="">
+        <p class="caption"><strong>2. Place Name</strong> — Description</p>
+      </div>
+      <div class="place" id="place-golf-3">
+        <img src="" alt="">
+        <p class="caption"><strong>3. Place Name</strong> — Description</p>
       </div>    
       </div>
     </section>
 
   <!--Food-->
-      <section class = "location mix food" id = "food">
+      <section class="location mix food" id="food">
       <button class="section-header" aria-expanded="false">🍔 Food</button>
       <div class="panel">
-      <img class = "map" src = "" alt = "">
-      <div class = "place">
-        <img src = "" alt = "">
-        <p class ="caption"><strong>Place Name</strong>Description</p>
+      <div class="map-wrap">
+        <img class="map" src="https://raw.githubusercontent.com/ricniel/Final-Project/main/Final%20Project/Food-map.png" alt="Map of Dublin showing food spots">
+        <button class="map-btn pos-food-1" data-scroll="place-food-1" aria-label="1 — Place Name">1</button>
+        <button class="map-btn pos-food-2" data-scroll="place-food-2" aria-label="2 — Place Name">2</button>
+        <button class="map-btn pos-food-3" data-scroll="place-food-3" aria-label="3 — Place Name">3</button>
       </div>
-      <div class = "place">
-        <img src = "" alt = "">
-        <p class ="caption"><strong>Place Name</strong>Description</p>
+      <div class="place" id="place-food-1">
+        <img src="" alt="">
+        <p class="caption"><strong>1. Place Name</strong> — Description</p>
       </div>
-      <div class = "place">
-        <img src = "" alt = "">
-        <p class ="caption"><strong>Place Name</strong>Description</p>
+      <div class="place" id="place-food-2">
+        <img src="" alt="">
+        <p class="caption"><strong>2. Place Name</strong> — Description</p>
+      </div>
+      <div class="place" id="place-food-3">
+        <img src="" alt="">
+        <p class="caption"><strong>3. Place Name</strong> — Description</p>
       </div>    
       </div>
     </section>
 
   <!--Nature-->
-      <section class = "location mix food" id = "nature">
+      <section class="location mix nature" id="nature">
       <button class="section-header" aria-expanded="false">🌳 Nature</button>
       <div class="panel">
-      <img class = "map" src = "" alt = "">
-      <div class = "place">
-        <img src = "" alt = "">
-        <p class ="caption"><strong>Place Name</strong>Description</p>
+      <div class="map-wrap">
+        <img class="map" src="https://raw.githubusercontent.com/ricniel/Final-Project/main/Final%20Project/nature-map.png" alt="Map showing Cliffs of Moher, Howth, and Pheonix Park">
+        <button class="map-btn pos-nat-1" data-scroll="place-nat-1" aria-label="1 — Place Name">1</button>
+        <button class="map-btn pos-nat-2" data-scroll="place-nat-2" aria-label="2 — Place Name">2</button>
+        <button class="map-btn pos-nat-3" data-scroll="place-nat-3" aria-label="3 — Place Name">3</button>
       </div>
-      <div class = "place">
-        <img src = "" alt = "">
-        <p class ="caption"><strong>Place Name</strong>Description</p>
+      <div class="place" id="place-nat-1">
+        <img src="" alt="">
+        <p class="caption"><strong>1. Place Name</strong> — Description</p>
       </div>
-      <div class = "place">
-        <img src = "" alt = "">
-        <p class ="caption"><strong>Place Name</strong>Description</p>
+      <div class="place" id="place-nat-2">
+        <img src="" alt="">
+        <p class="caption"><strong>2. Place Name</strong> — Description</p>
+      </div>
+      <div class="place" id="place-nat-3">
+        <img src="" alt="">
+        <p class="caption"><strong>3. Place Name</strong> — Description</p>
       </div>    
       </div>
     </section>

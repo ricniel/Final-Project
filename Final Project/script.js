@@ -1,6 +1,6 @@
 // Dark and light mode button
-const darkbutton = document.querySelector("#darktoggle");
-darkbutton.addEventListener("Click", function(){
+const darkbutton = document.querySelector("#darkbutton");
+darkbutton.addEventListener("click", function(){
     document.body.classList.toggle("dark");
 
     if (document.body.classList.contains("dark")){
@@ -10,7 +10,7 @@ darkbutton.addEventListener("Click", function(){
         darkbutton.textContent = "Dark Mode"
 })
 
-//Accordion setup
+//Accordion setup (from W3 Schools)
 var acc = document.getElementsByClassName("accordion");
 var i;
 for (i = 0; i < acc.length; i++) {
@@ -28,3 +28,8 @@ for (i = 0; i < acc.length; i++) {
     }
   });
 }
+//Mixitup initializer
+var mixer = mixitup('#mixitupContainer',{
+    selectors: {target: '.mix'
+},
+animation: {duration: 250}});

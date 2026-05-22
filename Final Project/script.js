@@ -29,7 +29,29 @@ for (i = 0; i < acc.length; i++) {
   });
 }
 //Mixitup initializer
-var mixer = mixitup('#mixitupContainer',{
+var mixer = mixitup('#mixContainer',{
     selectors: {target: '.mix'
 },
 animation: {duration: 250}});
+
+//Mixitupbuttons open accordions
+var filterBtns = document.querySelectorAll(".filter-btn");
+for (var f = 0; f < filterBtns.length; f++) {
+  filterBtns[f].addEventListener("click", function() {
+    var filter = this.dataset.filter;
+    if (filter === "all") return;
+
+    var sectionId = filter.replace(".", "");
+    var section = document.getElementById(sectionId);
+
+    if (section) {var btn = section.querySelector(".section-header");
+      var panel = section.querySelector(".panel");
+
+      if (panel.style.display !== "block") {
+        btn.classList.add("active");
+        panel.style.display = "block";
+      }
+      section.scrollIntoView({ behavior: "smooth" });
+    }
+  });
+}
